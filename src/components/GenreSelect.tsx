@@ -2,11 +2,10 @@ import React from 'react';
 
 type GenreSelectProps = {
   genres: string[];
-  selectedGenre: string;
   onSelect: (genre: string) => void;
 };
 
-const GenreSelect = ({ genres, selectedGenre, onSelect }: GenreSelectProps) => {
+const GenreSelect = ({ genres, onSelect }: GenreSelectProps) => {
   return (
     <div>
       {genres.map((genre) => (

@@ -28,7 +28,7 @@ function SearchForm({ initialQuery, onSearch }: SearchFormProps){
         onKeyDown={handleKeyDown} // Handle Enter key
         placeholder="What do you want to watch?"
       />
-      <button onClick={handleButtonClick} style={{ padding: '8px' }}>
+      <button onClick={handleButtonClick}>
         Search
       </button>
     </div>

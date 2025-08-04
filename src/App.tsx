@@ -9,7 +9,7 @@ function App() {
     <>
     <Counter />
     <SearchForm initialQuery="" onSearch={(query) => console.log("Search:", query)}/>
-    <GenreSelect genres={['All', 'Documentary', 'Comedy', 'Horror', 'Crime']} selectedGenre="All" onSelect={(selected) => console.log("Selected genre:", selected)}/>
+    <GenreSelect genres={['All', 'Documentary', 'Comedy', 'Horror', 'Crime']} onSelect={(selected) => console.log("Selected genre:", selected)}/>
     </>
   )
 }
