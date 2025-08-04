@@ -7,9 +7,9 @@ function Counter(){
     <>
       <div className="counter">
         <h1>counter</h1>
-        <button onClick={() => setCount((count) => count + 1)}>Increase count</button>
-        <button onClick={() => setCount((count) => count - 1)}>Decrease count</button>
-        <p>Count is {count}</p>
+        <button data-testid="increment" onClick={() => setCount((count) => count + 1)}>Increase count</button>
+        <button data-testid="decrement" onClick={() => setCount((count) => count - 1)}>Decrease count</button>
+        <p data-testid="counter-result">Count is {count}</p>
       </div>
     </>
     )
