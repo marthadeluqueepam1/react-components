@@ -1,23 +1,21 @@
-function GenreSelect(){
-    return (
-    <>
-      <div className="genreSelect">
-        <h1>genreSelect</h1>
-      </div>
-    </>
-    )
-}
+import React from 'react';
 
-export default GenreSelect
+type GenreSelectProps = {
+  genres: string[];
+  selectedGenre: string;
+  onSelect: (genre: string) => void;
+};
 
-// import React from "react";
-// import ReactDOM from "react-dom/client";
+const GenreSelect = ({ genres, selectedGenre, onSelect }: GenreSelectProps) => {
+  return (
+    <div>
+      {genres.map((genre) => (
+        <button key={genre} onClick={() => onSelect(genre)}>
+          {genre}
+        </button>
+      ))}
+    </div>
+  );
+};
 
-// const myHeader = React.createElement(
-//   "H1",
-//   { className: "header_title" },
-//   "Hello React!"
-// );
-// const rootElement = document.getElementById("root");
-
-// ReactDOM.render(myHeader, rootElement);
+export default GenreSelect;

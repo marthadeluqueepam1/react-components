@@ -6,7 +6,11 @@ import SearchForm from './components/SearchForm'
 function App() {
 
   return (
-    <><Counter /><SearchForm /><GenreSelect /></>
+    <>
+    <Counter />
+    <SearchForm initialQuery="" onSearch={(query) => console.log("Search:", query)}/>
+    <GenreSelect genres={['All', 'Documentary', 'Comedy', 'Horror', 'Crime']} selectedGenre="All" onSelect={(selected) => console.log("Selected genre:", selected)}/>
+    </>
   )
 }
 
